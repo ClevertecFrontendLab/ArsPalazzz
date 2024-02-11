@@ -1,0 +1,275 @@
+.container {
+    width: 1232px;
+    height: 283px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-top: 24px;
+}
+
+.containerCollapsed {
+    width: 1376px;
+    height: 283px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-top: 24px;
+}
+
+.reviews {
+    width: 171px;
+    height: 40px;
+    border-radius: 2px;
+    margin-left: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews p {
+    font-size: 16px;
+    line-height: 20.8px;
+    color: #2F54EB
+}
+
+
+
+.downloadOnPhoneBlock {
+    background-color: #FFFFFF;
+    width: 240px;
+    height: 127px;
+    border-radius: 2px;
+    margin-right: 24px;
+}
+
+.downloadOnPhoneBlock p {
+    margin: 0;
+}
+
+.downloadOnPhoneBlock .body {
+    width: 240px;
+    height: 59px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.downloadOnPhoneBlock .actions {
+    width: 240px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+}
+
+.downloadOnPhoneBlock .downloadOnPhoneInnerBlock {
+    margin-top: 12px;
+    margin-left: 24px;
+    width: 192px;
+    height: 21px;
+
+}
+
+.downloadOnPhoneBlock .downloadOnPhoneText {
+   font-size: 16px;
+   line-height: 20.8px;
+   color: #2F54EB;
+}
+
+.downloadOnPhoneBlock .availablePROInnerBlock {
+    margin-top: 8px;
+    margin-left: 24px;
+
+}
+
+.downloadOnPhoneBlock .availablePROInnerText {
+    font-size: 14px;
+    line-height: 18.2px;
+    color: #8C8C8C;
+ }
+
+
+ .actions {
+    display: flex;
+    flex-direction: row;
+
+ }
+
+
+ .androidBlock, .iosBlock {
+    width: 120px;
+    height: 32px;
+    border-radius: 2px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+ }
+
+ .androidBlock .icon, .iosBlock .icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    margin-left: 11px;
+ }
+
+ .androidBlock p, .iosBlock p {
+    font-size: 14px;
+    line-height: 18.2px;
+    color: #262626;
+ }
+
+
+ @media screen and (min-width: 834px) and (max-width: 1439px) {
+
+    .container {
+        width: 626px;
+        height: 364px;
+    }
+
+    .containerCollapsed {
+        width: 770px;
+        height: 489px;
+    }
+
+    .reviews {
+        width: 171px;
+        height: 40px;
+        border-radius: 2px;
+        margin-left: 24px;
+    }
+
+    .reviews p {
+        font-size: 16px;
+        line-height: 20.8px;
+    }
+
+
+    .downloadOnPhoneBlock {
+        background-color: #FFFFFF;
+        width: 240px;
+        height: 127px;
+        border-radius: 2px;
+        margin-right: 24px;
+    }
+
+    .downloadOnPhoneBlock p {
+        margin: 0;
+    }
+ }
+
+
+
+ @media screen and (min-width: 340px) and (max-width: 833px) {
+    .container, .containerCollapsed {
+        width: 360px;
+        height: 191px;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+
+    .reviews {
+        width: 328px;
+        height: 40px;
+        border-radius: 2px;
+        margin-left: 0px;
+        margin-top: 24px;
+    }
+
+    .reviews p {
+        font-size: 16px;
+        line-height: 20.8px;
+        margin: 0;
+    }
+
+
+    .downloadOnPhoneBlock {
+        background-color: #FFFFFF;
+        width: 328px;
+        height: 127px;
+        border-radius: 2px;
+        margin-right: 0px;
+        margin-top: 24px;
+    }
+
+    .downloadOnPhoneBlock .body {
+        width: 328px;
+        height: 50px;
+        padding-bottom: 12px;
+    }
+
+    .downloadOnPhoneBlock .actions {
+        width: 328px;
+        height: 56px;
+    }
+
+    .downloadOnPhoneBlock .downloadOnPhoneInnerBlock {
+        width: 280px;
+        height: 21px;
+        text-align: center;
+    }
+
+    .availablePROInnerBlock {
+        width: 280px;
+        height: 18px;
+        text-align: center;
+
+    }
+
+    .downloadOnPhoneInnerBlock p {
+        font-size: 16px;
+        line-height: 20.8px;
+        font-weight: 400;
+        font-family: 'Inter', sans-serif;
+    }
+
+
+    .availablePROInnerBlock p {
+        font-size: 14px;
+
+    }
+
+    .downloadOnPhoneBlock p {
+        margin: 0;
+    }
+
+    .actions {
+        align-items: center;
+    }
+
+    .actions .androidBlock, .actions .iosBlock {
+        width: 164px;
+        height: 32px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        align-items: center;
+    }
+
+
+
+    .actions .androidBlock .icon, .actions .iosBlock .icon {
+        margin-left: 33px;
+        margin-top: 0px;
+    }
+
+    .actions .androidBlock  span, .actions .iosBlock  span {
+        width: 14px;
+        height: 14px;
+    }
+
+    .actions .androidBlock  span svg, .actions .iosBlock  span svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .actions .androidBlock p, .actions .iosBlock p {
+        margin-left: 8px;
+        font-size: 14px;
+        margin-top: 0px;
+    }
+}

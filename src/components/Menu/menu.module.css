@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.menu p {
+    display: inline;
+    font-size: 14px;
+    color: #121212
+}
+
+.menu > div {
+    width: 100%;
+}
+
+.menu li {
+    list-style-type: none;
+    width: 176px;
+    height: 42px;
+    margin:  0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.menuSmall li {
+    list-style-type: none;
+    width: 64px;
+    height: 42px;
+    margin:  0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li img {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+.menuSmall li img {
+    width: 16px;
+    height: 16px;
+}
+
+.menu div:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .menuSmall div:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+
+  .antdIcon {
+    color: #061178;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+  }
+
+  .antdIconSmall {
+    color: #061178;
+    width: 16px;
+    height: 16px;
+
+  }
+
+
+  @media screen and (min-width: 834px) and (max-width: 1439px) {
+
+    .menu > div {
+
+        width: 208px;
+        height: 42px;
+
+    }
+
+    .menuSmall li {
+        list-style-type: none;
+        width: 64px;
+        height: 42px;
+        margin:  0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    li p {
+        margin: 0;
+    }
+
+  }
+
+
+
+
+  @media screen and (min-width: 340px) and (max-width: 833px) {
+
+    .menu > div {
+
+        width: 106px;
+        height: 42px;
+
+    }
+
+    .menu div:not(:last-child) {
+        margin-bottom: 8px;
+      }
+
+      .menuSmall div:not(:last-child) {
+        margin-bottom: 8px;
+      }
+
+    .menu li {
+        list-style-type: none;
+        width: 90px;
+        height: 42px;
+        margin:  0;
+        margin-left: 8px;
+    }
+
+    .menuSmall li {
+        list-style-type: none;
+        width: 90px;
+        height: 42px;
+        margin:  0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        display: none;
+        position: absolute;
+    }
+
+    li p {
+        margin: 0;
+    }
+
+    .antdIcon, .antdIconSmall, .menu img, .menuSmall img {
+        display: none;
+        position: absolute;
+    }
+
+  }
