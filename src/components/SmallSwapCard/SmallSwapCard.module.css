@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 .container, .containerCollapsed {
     width: 240px;
     height: 101px;
@@ -25,6 +27,8 @@
     font-size: 16px;
     line-height: 20.8px;
     margin: 0;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
 }
 
 .actions {

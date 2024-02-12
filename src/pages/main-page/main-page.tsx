@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Layout } from 'antd';
 import classes from './main-page.module.css';
 import MySider from '@components/Sider/MySider';
-import Sider from 'antd/lib/layout/Sider';
 import MyHeader from '@components/MyHeader/MyHeader';
 import MyContent from '@components/MyContent/MyContent';
 
@@ -10,26 +9,11 @@ import MyContent from '@components/MyContent/MyContent';
 
 
 export const MainPage: React.FC = () => {
-    const [width, setWidth] = useState(window.innerWidth);
     const [collapsed, setCollapsed] = useState(false);
 
     const toggleCollapsed = () => {
         setCollapsed(!collapsed);
     };
-
-    useEffect(() => {
-        const handleResize = () => {
-            setWidth(window.innerWidth);
-        };
-
-        console.log(window.innerWidth)
-        window.addEventListener('resize', handleResize);
-
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
 
 
     return (

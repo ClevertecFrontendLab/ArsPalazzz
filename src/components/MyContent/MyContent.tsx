@@ -1,5 +1,4 @@
 import CardsActions from '@components/CardsActions/CardsActions'
-import React from 'react'
 import classes from './MyContent.module.css'
 import ContentWrap from '@components/ContentWrap/ContentWrap'
 import MyFooter from '@components/MyFooter/MyFooter'
