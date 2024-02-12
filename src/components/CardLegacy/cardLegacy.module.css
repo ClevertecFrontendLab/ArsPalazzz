@@ -1,0 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.cardLegacy, .cardLegacyCollapsed {
+    width: 752px;
+    height: 216px;
+    border-radius: 2px;
+    background-color: #fff;
+    margin-left: 24px;
+}
+
+.cardLegacy .cardBody, .cardLegacyCollapsed .cardBody {
+    width: 704px;
+    height: 168px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-left: 24px;
+}
+
+.cardLegacy .cardBody p, .cardLegacyCollapsed .cardBody p {
+    color: #061178;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    line-height: 20.8px;
+}
+
+
+@media screen and (min-width: 834px) and (max-width: 1439px) {
+
+    .cardLegacy {
+        width: 578px;
+        height: 258px;
+        border-radius: 2px;
+        background-color: #fff;
+        margin-left: 24px;
+    }
+
+    .cardLegacyCollapsed {
+        width: 722px;
+        height: 216px;
+        border-radius: 2px;
+        background-color: #fff;
+        margin-left: 24px;
+    }
+
+    .cardLegacy .cardBody {
+        width: 530px;
+        height: 210px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        margin-left: 24px;
+    }
+
+    .cardLegacyCollapsed .cardBody {
+        width: 674px;
+        height: 168px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        margin-left: 24px;
+    }
+
+    .cardLegacy .cardBody p {
+        color: #061178;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        line-height: 20.8px;
+    }
+
+    .cardLegacyCollapsed .cardBody p {
+        color: #061178;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        line-height: 20.8px;
+    }
+}
+
+
+@media screen and (min-width: 340px) and (max-width: 833px) {
+
+
+    .cardLegacy, .cardLegacyCollapsed {
+        width: 328px;
+        height: 368px;
+        margin-left: 16px;
+    }
+
+    .cardLegacy .cardBody, .cardLegacyCollapsed .cardBody {
+        width: 296px;
+        height: 336px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        margin-left: 16px;
+    }
+
+    .cardBody p {
+        color: #061178;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        line-height: 20.8px;
+
+        width: 296px;
+        height: 336px;
+    }
+
+}

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.exitDiv {
+    width: 208px;
+    height: 40px;
+}
+
+.exitDivSmall {
+    width: 64px;
+    height: 40px;
+}
+
+.exitDiv li > div {
+    width: 74px;
+    height: 26px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exitDiv p {
+    display: inline;
+    font-size: 14px;
+    line-height: 18.2px;
+    margin: 0;
+}
+
+.exitDiv li {
+    margin: 0 auto;
+    width: 176px;
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.exitDivSmall li {
+    margin: 0 auto;
+    width: 32px;
+    height: 40px;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.exitDiv li img {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+.exitDivSmall li img {
+    width: 16px;
+    height: 16px;
+}
+
+@media screen and (min-width: 340px) and (max-width: 833px) {
+
+
+    .exitDiv {
+        width: 106px;
+        height: 40px;
+    }
+
+    .exitDiv li {
+        width: 74px;
+        height: 40px;
+    }
+
+    .exitDiv img, .exitDivSmall img {
+        display: none;
+        position: absolute;
+    }
+
+
+}

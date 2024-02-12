@@ -1,0 +1,34 @@
+.cardsActionsContainer, .cardsActionsContainerCollapsed {
+    width: 1232px;
+    height: 216px;
+    padding-top: 24px;
+}
+
+
+@media screen and (min-width: 834px) and (max-width: 1439px) {
+
+    .cardsActionsContainer {
+        width: 626px;
+        height: 258px;
+        padding-top: 24px;
+    }
+
+    .cardsActionsContainerCollapsed {
+        width: 770px;
+        height: 216px;
+        padding-top: 24px;
+    }
+
+}
+
+
+@media screen and (min-width: 340px) and (max-width: 833px) {
+
+    .cardsActionsContainer, .cardsActionsContainerCollapsed {
+        width: 360px;
+        height: 368px;
+        padding-top: 24px;
+    }
+
+}
+

@@ -1,34 +1,42 @@
 import React, { useState } from 'react';
+import { Layout } from 'antd';
+import classes from './main-page.module.css';
+import MySider from '@components/Sider/MySider';
+import MyHeader from '@components/MyHeader/MyHeader';
+import MyContent from '@components/MyContent/MyContent';
 
-import reactLogo from '/react.svg';
-import viteLogo from '/vite.svg';
-import tsLogo from '/ts.svg';
-import './main-page.css';
+
+
 
 export const MainPage: React.FC = () => {
-    const [count, setCount] = useState(0);
+    const [collapsed, setCollapsed] = useState(false);
+
+    const toggleCollapsed = () => {
+        setCollapsed(!collapsed);
+    };
+
 
     return (
-        <>
-            <div>
-                <a href='https://vitejs.dev' target='_blank'>
-                    <img src={viteLogo} className='logo' alt='Vite logo' />
-                </a>
-                <a href='https://react.dev' target='_blank'>
-                    <img src={reactLogo} className='logo react' alt='React logo' />
-                </a>
-                <a href='https://www.typescriptlang.org/' target='_blank'>
-                    <img src={tsLogo} className='logo' alt='TS logo' />
-                </a>
-            </div>
-            <h1>Vite + React + TS</h1>
-            <div className='card'>
-                <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-                <p>
-                    Edit <code>src/pages/main-page.tsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
-        </>
+        <div id='appContainer' style={{ width: '100vw', backgroundColor: '#fff' }}>
+            <Layout className={classes.mainLayout}>
+                {
+                    !collapsed ?
+                        <div className={classes.sider} >
+                            <MySider isCollapsed={collapsed} setCollapse={toggleCollapsed} />
+                        </div>
+                        :
+                        <div className={classes.siderCollapsed} >
+                            <MySider isCollapsed={collapsed} setCollapse={toggleCollapsed} />
+                        </div>
+                }
+                <Layout className={!collapsed ? classes.rightLayoutPart : classes.rightLayoutPartCollapsed}>
+                    <MyHeader isCollapsed={collapsed} />
+                    <MyContent isCollapsed={collapsed} />
+
+                </Layout>
+            </Layout>
+        </div>
+
     );
 };
+
