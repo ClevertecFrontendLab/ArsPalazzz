@@ -9,12 +9,7 @@
     height: 126px;
     border-radius: 2px;
     background-color: #fff;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     margin-left: 24px;
-    /* margin-top: 24px; */
-    /* padding-top: 24px; */
 }
 
 .cardLegacy .cardBody {
@@ -125,7 +120,7 @@
 
     .contentWrapContainer, .contentWrapContainerCollapsed {
         width: 360px;
-        height: 523px;
+        height: 547px;
 
         display: flex;
         flex-direction: column;

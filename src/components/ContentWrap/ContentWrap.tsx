@@ -1,6 +1,5 @@
-import React from 'react'
 import classes from './contentWrap.module.css';
-import { Row, Col, Space } from 'antd';
+import { Space } from 'antd';
 import SmallSwapCard from '@components/SmallSwapCard/SmallSwapCard';
 import { HeartFilled, IdcardOutlined } from '@ant-design/icons';
 import calendar from './wrapper.svg'

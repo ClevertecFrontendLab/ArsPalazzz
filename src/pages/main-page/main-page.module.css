@@ -58,10 +58,6 @@
         height: 1194px;
     }
 
-    /* #appContainer .ant-layout .ant-layout-sider .siderCollapsed {
-        width: 64px;
-        height: 1194px;
-    } */
 
 
     .rightLayoutPart {
@@ -103,13 +99,8 @@
 
      .sider {
         width: 106px;
-        height: 640px;
+        height: 100vh;
     }
-
-    /* #appContainer .ant-layout .ant-layout-sider .siderCollapsed {
-        width: 64px;
-        height: 1194px;
-    } */
 
 
     .rightLayoutPart, .rightLayoutPartCollapsed {

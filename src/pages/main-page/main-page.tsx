@@ -12,7 +12,6 @@ import MyContent from '@components/MyContent/MyContent';
 export const MainPage: React.FC = () => {
     const [width, setWidth] = useState(window.innerWidth);
     const [collapsed, setCollapsed] = useState(false);
-    // const screens = useBreakpoint() as unknown as Breakpoint;
 
     const toggleCollapsed = () => {
         setCollapsed(!collapsed);
@@ -26,34 +25,12 @@ export const MainPage: React.FC = () => {
         console.log(window.innerWidth)
         window.addEventListener('resize', handleResize);
 
-        // Убираем слушатель события при размонтировании компонента
+
         return () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
 
-    const getWidth = (val = 0) => {
-        if (width >= 834 && width <= 1440) {
-            return 64; // Возвращаемое значение для диапазона от 834px до 1440px
-        } else if (width >= 340 && width <= 834) {
-            return 50; // или другое значение по умолчанию
-        } else if (width >= 1440) {
-            return 208;
-        } else {
-            return 50;
-        }
-    };
-
-
-    // const layoutWidth = () => {
-    //     if ((screens as any).xs) {
-    //         return '340px';
-    //     }
-    //     if ((screens as any).sm || (screens as any).md) {
-    //         return '834px';
-    //     }
-    //     return '1440px';
-    // };
 
     return (
         <div id='appContainer' style={{ width: '100vw', backgroundColor: '#fff' }}>

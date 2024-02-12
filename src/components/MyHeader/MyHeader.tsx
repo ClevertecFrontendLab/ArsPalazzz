@@ -12,9 +12,6 @@ export default function MyHeader({ isCollapsed }: MyHeaderProps) {
     return (
         <div className={!isCollapsed ? classes.myHeader : classes.myHeaderCollapsed}>
             <Space style={{ paddingTop: '16px', paddingLeft: '24px', gap: '0' }}>
-                {/* <Breadcrumb>
-                    <Breadcrumb.Item>Главная</Breadcrumb.Item>
-                </Breadcrumb> */}
                 <p>Главная</p>
                 <GreetingAndSettings isCollapsed={isCollapsed} />
             </Space>

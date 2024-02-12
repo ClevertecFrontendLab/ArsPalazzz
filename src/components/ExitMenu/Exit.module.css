@@ -10,9 +10,20 @@
     height: 40px;
 }
 
+.exitDiv li > div {
+    width: 74px;
+    height: 26px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .exitDiv p {
     display: inline;
     font-size: 14px;
+    line-height: 18.2px;
+    margin: 0;
 }
 
 .exitDiv li {
@@ -61,10 +72,6 @@
     .exitDiv img, .exitDivSmall img {
         display: none;
         position: absolute;
-    }
-
-    .exitDivSmall {
-
     }
 
 

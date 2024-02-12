@@ -10,7 +10,7 @@ export default function ExitMenu({ isCollapsed }: ExitMenuProps) {
     return (
         <div className={!isCollapsed ? classes.exitDiv : classes.exitDivSmall}><li><img src={exit} />
             {
-                !isCollapsed ? <p>Выход</p> : null
+                !isCollapsed ? <div><p>Выход</p></div> : null
             }
 
         </li></div>

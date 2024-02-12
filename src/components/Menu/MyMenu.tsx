@@ -14,7 +14,6 @@ export default function MyMenu({ isCollapsed }: MyMenuProps) {
     const [hovered, setHovered] = useState(false);
 
     return (
-        // <Menu></Menu>
         <div className={!isCollapsed ? classes.menu : classes.menuSmall}>
 
 

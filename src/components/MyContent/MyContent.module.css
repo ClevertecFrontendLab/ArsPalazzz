@@ -1,8 +1,4 @@
 .myContentContainer {
-    /* background-image:  url('./back.png');
-    background-repeat: no-repeat;
-    background-size:  cover;
-    background-position: center bottom; */
     height: 856px;
 }
 
@@ -10,7 +6,6 @@
 @media screen and (min-width: 834px) and (max-width: 1439px) {
     .myContentContainer {
         height: 1000px;
-        /* background-position: center bottom; */
     }
 }
 
@@ -18,6 +13,5 @@
 @media screen and (min-width: 340px) and (max-width: 833px) {
     .myContentContainer {
         height: 1196px;
-        /* background-position: center bottom; */
     }
 }
