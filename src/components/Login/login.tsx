@@ -12,6 +12,7 @@ import { setEmailForForgot } from '@redux/auth.slice.ts';
 
 import './login.css';
 import s from './login.module.css';
+import { ERROR_STATUS } from '@constants/error-status';
 
 export const Login = () => {
     const navigate = useNavigate();
@@ -44,11 +45,10 @@ export const Login = () => {
                 navigate(PATHS.CONFIRM_EMAIL);
             })
             .catch((e) => {
-                if (e.status === 404 && e.data.message === 'Email не найден') {
+                if (e.status === ERROR_STATUS.NOT_FOUND && e.data.message === 'Email не найден') {
                     navigate(PATHS.EMAIL_NO_EXIST);
                 } else {
                     dispatch(setEmailForForgot({ email: value }));
-                    //navigate(PATHS.ERROR_CHECK_EMAIL);
                     history.push(PATHS.ERROR_CHECK_EMAIL);
                 }
             });
