@@ -23,6 +23,7 @@
             "@constants/*": ["./src/constants/*"],
             "@hooks/*": ["./src/hooks/*"],
             "@pages/*": ["./src/pages/*"],
+            "@routes/*": ["./src/routes/*"],
             "@redux/*": ["./src/redux/*"],
             "@types/*": ["./src/types/*"],
             "@utils/*": ["./src/utils/*"]
