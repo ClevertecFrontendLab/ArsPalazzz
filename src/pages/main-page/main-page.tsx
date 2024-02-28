@@ -1,42 +1,35 @@
 import React, { useState } from 'react';
 import { Layout } from 'antd';
-import classes from './main-page.module.css';
-import MySider from '@components/Sider/MySider';
-import MyHeader from '@components/MyHeader/MyHeader';
-import MyContent from '@components/MyContent/MyContent';
+import { Navigate } from 'react-router-dom';
+import { HeaderComponent } from '@components/HeaderComponent';
+import { MainContent } from '@components/MainContent';
+import { FooterComponent } from '@components/FooterComponent';
+import { Navbar } from '@components/navbar';
+import { useAppSelector } from '@redux/configure-store.ts';
+import { PATHS } from '@constants/paths.ts';
 
-
-
+import styles from './main-page.module.css';
 
 export const MainPage: React.FC = () => {
-    const [collapsed, setCollapsed] = useState(false);
+    const prevPath = useAppSelector((state) => state.router.previousLocations);
+    const [navbarCollapsed, setNavbarCollapsed] = useState(false);
 
-    const toggleCollapsed = () => {
-        setCollapsed(!collapsed);
-    };
-
-
+    if (
+        !localStorage.getItem('accessToken') &&
+        prevPath &&
+        prevPath[prevPath.length - 1].location?.pathname !== PATHS.AUTH
+    ) {
+        sessionStorage.clear();
+        return <Navigate to={PATHS.AUTH} />;
+    }
     return (
-        <div id='appContainer' style={{ width: '100vw', backgroundColor: '#fff' }}>
-            <Layout className={classes.mainLayout}>
-                {
-                    !collapsed ?
-                        <div className={classes.sider} >
-                            <MySider isCollapsed={collapsed} setCollapse={toggleCollapsed} />
-                        </div>
-                        :
-                        <div className={classes.siderCollapsed} >
-                            <MySider isCollapsed={collapsed} setCollapse={toggleCollapsed} />
-                        </div>
-                }
-                <Layout className={!collapsed ? classes.rightLayoutPart : classes.rightLayoutPartCollapsed}>
-                    <MyHeader isCollapsed={collapsed} />
-                    <MyContent isCollapsed={collapsed} />
-
-                </Layout>
+        <Layout className={styles.main_layout}>
+            <Navbar setNavbarCollapsed={setNavbarCollapsed} />
+            <Layout style={{ backgroundColor: 'transparent' }}>
+                <HeaderComponent navbarCollapsed={navbarCollapsed} />
+                <MainContent navbarCollapsed={navbarCollapsed} />
+                <FooterComponent navbarCollapsed={navbarCollapsed} />
             </Layout>
-        </div>
-
+        </Layout>
     );
 };
-
