@@ -1,5 +1,5 @@
 import { Layout } from 'antd';
-import { Navbar } from '@components/Navbar';
+import { Navbar } from '@components/navbar';
 import { HeaderComponent } from '@components/HeaderComponent';
 import { FooterComponent } from '@components/FooterComponent';
 import { ReactNode } from 'react';
