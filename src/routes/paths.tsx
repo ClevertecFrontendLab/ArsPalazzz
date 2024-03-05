@@ -13,11 +13,13 @@ import { SuccessChangePassword } from '@pages/success-change-password';
 import { ConfirmEmail } from '@pages/confirm-email';
 import { AuthChangePassword } from '@pages/auth-change-password';
 import { LoginPage } from '@pages/login-page';
+import { RootAuthRedirect } from '@pages/root-auth-redirect';
+import { FeedbackPage } from '@pages/feedback-page';
 
 export const routes = (
     <Routes>
         <Route path={PATHS.MAIN} element={<MainPage />} />
-        <Route path={PATHS.ROOT} element={<Navigate to={PATHS.MAIN} />} />
+        <Route path={PATHS.ROOT} element={<RootAuthRedirect />} />
         <Route path={PATHS.AUTH} element={<LoginPage />} />
         <Route path={PATHS.REGISTRATION} element={<RegistrationPage />} />
 
@@ -31,5 +33,7 @@ export const routes = (
         <Route path={PATHS.SUCCESS_CHANGE_PASSWORD} element={<SuccessChangePassword />} />
         <Route path={PATHS.CONFIRM_EMAIL} element={<ConfirmEmail />} />
         <Route path={PATHS.CHANGE_PASSWORD} element={<AuthChangePassword />} />
+
+        <Route path={PATHS.FEEDBACK} element={<FeedbackPage />} />
     </Routes>
 );

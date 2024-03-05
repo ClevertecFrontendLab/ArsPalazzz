@@ -7,8 +7,8 @@ import {
     ConfirmEmailResponse,
     EnterArgs,
     LoginResponse,
-} from './../types';
-import { baseApi } from '@redux/base-api.ts';
+} from '../../types';
+import { baseApi } from '@redux/api/base-api';
 
 const authApi = baseApi.injectEndpoints({
     endpoints: (builder) => {

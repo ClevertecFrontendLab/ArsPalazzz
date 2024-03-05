@@ -4,11 +4,11 @@ import { Button, Checkbox, Form, Input, Typography } from 'antd';
 import { EnterButtons } from '@components/EnterButtons';
 import { EmailInput } from '@components/EmailInput';
 import { LoginValuesType } from './../../types';
-import { useCheckEmailMutation, useLoginMutation } from '@redux/auth-api.ts';
+import { useCheckEmailMutation, useLoginMutation } from '@redux/api/auth-api';
 import { Loader } from '@components/Loader';
 import { PATHS } from '@constants/paths.ts';
 import { history, useAppDispatch, useAppSelector } from '@redux/configure-store.ts';
-import { setEmailForForgot } from '@redux/auth.slice.ts';
+import { setEmailForForgot } from '@redux/reducers/auth.slice';
 
 import './login.css';
 import s from './login.module.css';
