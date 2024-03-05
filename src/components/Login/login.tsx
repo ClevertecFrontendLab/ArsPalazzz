@@ -4,15 +4,16 @@ import { Button, Checkbox, Form, Input, Typography } from 'antd';
 import { EnterButtons } from '@components/EnterButtons';
 import { EmailInput } from '@components/EmailInput';
 import { LoginValuesType } from './../../types';
-import { useCheckEmailMutation, useLoginMutation } from '@redux/api/auth-api';
+import { useCheckEmailMutation, useLoginMutation } from '@redux/api/auth-api.ts';
 import { Loader } from '@components/Loader';
 import { PATHS } from '@constants/paths.ts';
 import { history, useAppDispatch, useAppSelector } from '@redux/configure-store.ts';
-import { setEmailForForgot } from '@redux/reducers/auth.slice';
+import { setEmailForForgot } from '@redux/reducers/auth.slice.ts';
+import { ERROR_STATUS } from '@constants/error-status.ts';
+import { passwordRegex } from '@utils/regex.ts';
 
 import './login.css';
-import s from './login.module.css';
-import { ERROR_STATUS } from '@constants/error-status';
+import styles from './login.module.css';
 
 export const Login = () => {
     const navigate = useNavigate();
@@ -27,6 +28,10 @@ export const Login = () => {
 
     const [isEmailHasError, setIsEmailHasError] = useState(false);
     const error_style = isEmailHasError ? 'email_error' : 'no_error';
+
+    const handleGoogleLogin = () => {
+        window.location.href = 'https://marathon-api.clevertec.ru/auth/google';
+    };
 
     const getEmail = (value: string) => {
         dispatch(setEmailForForgot({ email: value }));
@@ -55,7 +60,9 @@ export const Login = () => {
     };
 
     const onClickForgotBtn = () => {
-        if (!isEmailTouched || isEmailHasError) setDisabledForgot(true);
+        if (!isEmailTouched || isEmailHasError) {
+            setDisabledForgot(true);
+        }
         if (isEmailTouched && !isEmailHasError) {
             sendRequestIfForgot(emailForForgot.email);
         }
@@ -94,24 +101,24 @@ export const Login = () => {
             {(isLoading || isCheckEmailLoading) && <Loader />}
             <Form
                 name='login'
-                className={s.login_form}
-                initialValues={{ remember: true }}
+                className={styles.login_form}
+                initialValues={{ remember: false }}
                 onFinish={onFinish}
                 onFieldsChange={handleFormChange}
                 form={form}
             >
-                <div className={s.inputs_wrapper}>
-                    <div id={s.email_id} className={`${s[error_style]}`}>
+                <div className={styles.inputs_wrapper}>
+                    <div id={styles.email_id} className={`${styles[error_style]}`}>
                         <EmailInput getEmailValue={getEmail} dataAttribute='login-email' />
                     </div>
                     <Form.Item
-                        className={s.password}
+                        className={styles.password}
                         name='password'
                         rules={[
                             {
                                 required: true,
                                 validator: (_, value) => {
-                                    if (/^(?=.*\d)(?=.*[A-Z])[a-zA-Z0-9]{8,}$/.test(value)) {
+                                    if (passwordRegex.test(value)) {
                                         return Promise.resolve();
                                     }
                                     return Promise.reject(
@@ -129,7 +136,7 @@ export const Login = () => {
                     </Form.Item>
                 </div>
 
-                <Form.Item className={s.remember_forgot}>
+                <Form.Item className={styles.remember_forgot}>
                     <Form.Item name='remember' valuePropName='checked' noStyle>
                         <Checkbox data-test-id='login-remember'>
                             <Typography.Text>Запомнить меня</Typography.Text>
@@ -152,6 +159,7 @@ export const Login = () => {
                     dataAttribute='login-submit-button'
                     enterButtonBody='Войти'
                     googleButtonBody='Войти через Google'
+                    loginWithGoogle={handleGoogleLogin}
                     className='login_buttons'
                     disabled={false}
                 />
