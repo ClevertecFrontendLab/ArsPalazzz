@@ -6,8 +6,8 @@ import { PATHS } from '@constants/paths.ts';
 import styles from './breadcrumbs.module.css';
 
 type BreadcrumbItemType = {
-    path?: string;
     name: string;
+    path?: string;
 };
 type BreadCrumbRoutesType = {
     main: BreadcrumbItemType[];

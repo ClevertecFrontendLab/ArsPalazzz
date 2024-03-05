@@ -11,15 +11,13 @@ type PropsType = {
     isMainPage?: boolean;
 };
 
-export const LayoutComponent = ({ children, isMainPage = false }: PropsType) => {
-    return (
-        <Layout className={styles.main_layout}>
-            <Navbar />
-            <Layout style={{ backgroundColor: 'transparent' }}>
-                <HeaderComponent isMainPage={isMainPage} />
-                {children}
-                <FooterComponent isMainPage={isMainPage} />
-            </Layout>
+export const LayoutComponent = ({ children, isMainPage = false }: PropsType) => (
+    <Layout className={styles.main_layout}>
+        <Navbar />
+        <Layout style={{ backgroundColor: 'transparent' }}>
+            <HeaderComponent isMainPage={isMainPage} />
+            {children}
+            <FooterComponent isMainPage={isMainPage} />
         </Layout>
-    );
-};
+    </Layout>
+);

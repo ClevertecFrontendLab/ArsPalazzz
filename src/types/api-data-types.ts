@@ -1,3 +1,5 @@
+type Nullable<T> = null | T;
+
 export type LoginResponse = {
     accessToken: string;
 };
@@ -32,9 +34,9 @@ export type ChangePasswordResponse = {
 
 export type GetFeedbackResponse = {
     id: string;
-    fullName: null | string;
-    imageSrc: null | string;
-    message: null | string;
+    fullName: Nullable<string>;
+    imageSrc: Nullable<string>;
+    message: Nullable<string>;
     rating: number;
     createdAt: string;
 };

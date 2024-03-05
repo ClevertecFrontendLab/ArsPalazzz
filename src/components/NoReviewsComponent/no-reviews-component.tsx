@@ -1,5 +1,5 @@
 import { Button, Typography } from 'antd';
-import { useAppDispatch, useAppSelector } from '@redux/configure-store.ts';
+import { isNavbarCollapsedSelect, useAppDispatch, useAppSelector } from '@redux/configure-store.ts';
 import { useResize } from '@hooks/useResize.ts';
 import { screenSizes } from '@constants/sizes.ts';
 import { setIsModalNewReviewOpen } from '@redux/reducers';
@@ -8,7 +8,7 @@ import styles from './no-reviews-component.module.css';
 
 export const NoReviewsComponent = () => {
     const dispatch = useAppDispatch();
-    const isNavbarCollapsed = useAppSelector((state) => state.layout.isNavbarCollapsed);
+    const isNavbarCollapsed = useAppSelector(isNavbarCollapsedSelect);
 
     const screenWidth = useResize();
     const no_reviews_style =

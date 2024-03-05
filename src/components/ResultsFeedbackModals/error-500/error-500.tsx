@@ -15,7 +15,7 @@ export const Error500 = () => {
     };
     return (
         <Result
-            className={`${styles.error}`}
+            className={styles.error}
             status='500'
             title='Что-то пошло не так'
             subTitle='Произошла ошибка, попробуйте ещё раз.'

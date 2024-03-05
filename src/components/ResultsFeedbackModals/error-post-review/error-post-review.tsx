@@ -11,7 +11,6 @@ export const ErrorPostReview = () => {
         dispatch(setIsModalNewReviewOpen({ isOpen: true }));
     };
     const onModalClose = () => {
-        //clear();
         dispatch(setIsModalErrorPostReviewOpen({ isOpen: false }));
     };
     return (

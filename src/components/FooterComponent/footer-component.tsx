@@ -18,23 +18,21 @@ export const FooterComponent = ({ isMainPage }: IsMainPagePropsType) => {
             : 'footer_wrapper';
 
     return (
-        <>
-            <Layout.Footer style={{ padding: 0, backgroundColor: 'transparent' }}>
-                {isMainPage && (
-                    <div className={`${styles.footer_wrapper} ${styles[changedPadding]}`}>
-                        <Button
-                            data-test-id='see-reviews'
-                            className={styles.review_btn}
-                            type='text'
-                        >
-                            <Link to={PATHS.FEEDBACK} className={styles.footer_btn_text}>
-                                Смотреть отзывы
-                            </Link>
-                        </Button>
-                        <DownloadCard />
-                    </div>
-                )}
-            </Layout.Footer>
-        </>
+        <Layout.Footer style={{ padding: 0, backgroundColor: 'transparent' }}>
+            {isMainPage && (
+                <div className={`${styles.footer_wrapper} ${styles[changedPadding]}`}>
+                    <Button
+                        data-test-id='see-reviews'
+                        className={styles.review_btn}
+                        type='text'
+                    >
+                        <Link to={PATHS.FEEDBACK} className={styles.footer_btn_text}>
+                            Смотреть отзывы
+                        </Link>
+                    </Button>
+                    <DownloadCard />
+                </div>
+            )}
+        </Layout.Footer>
     );
 };
