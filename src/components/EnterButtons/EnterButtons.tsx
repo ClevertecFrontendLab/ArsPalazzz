@@ -3,7 +3,7 @@ import { GooglePlusOutlined } from '@ant-design/icons';
 import { useResize } from '@hooks/useResize.ts';
 import { screenSizes } from '@constants/sizes.ts';
 
-import styles from './enter-buttons.module.css';
+import styles from './EnterButtons.module.css';
 
 type PropsType = {
     dataAttribute?: string;
